@@ -1,0 +1,102 @@
+# Metodologia Geral de Upload de Arquivos
+
+Este documento fornece uma metodologia para testar uploads de arquivos em diferentes contextos e tecnologias. Ele aborda técnicas para evitar verificações de extensões de arquivos e explorar vulnerabilidades associadas.
+
+## Extensões Úteis
+
+### PHP
+Extensões comuns para arquivos PHP:
+- `.php`, `.php2`, `.php3`, `.php4`, `.php5`, `.php6`, `.php7`, `.phps`
+- `.ph`, `.phtm`, `.phtml`, `.pgif`, `.shtml`, `.htaccess`
+- `.phar`, `.inc`, `.hphp`, `.ctp`, `.module`
+
+Para PHP versão 8:
+- `.php`, `.php4`, `.php5`, `.phtml`, `.module`, `.inc`, `.hphp`, `.ctp`
+
+### ASP
+Extensões comuns para arquivos ASP:
+- `.asp`, `.aspx`, `.config`, `.ashx`, `.asmx`
+- `.aspq`, `.axd`, `.cshtm`, `.cshtml`, `.rem`
+- `.soap`, `.vbhtm`, `.vbhtml`, `.asa`, `.cer`, `.shtml`
+
+### JSP
+Extensões comuns para arquivos JSP:
+- `.jsp`, `.jspx`, `.jsw`, `.jsv`, `.jspf`, `.wss`, `.do`, `.action`
+
+### ColdFusion
+Extensões comuns para arquivos ColdFusion:
+- `.cfm`, `.cfml`, `.cfc`, `.dbm`
+
+### Flash
+Extensões comuns para arquivos Flash:
+- `.swf`
+
+### Perl
+Extensões comuns para arquivos Perl:
+- `.pl`, `.cgi`
+
+### Erlang (Yaws)
+Extensões comuns para servidores Web Erlang (Yaws):
+- `.yaws`
+
+## Ignorar Verificações de Extensões de Arquivo
+
+Para contornar verificações de extensão de arquivo, você pode:
+
+1. **Testar Extensões em Maiúsculas**:
+   - Exemplo: `pHp`, `.pHP5`, `.PhAr`
+
+2. **Adicionar Extensão Válida Antes da Extensão de Execução**:
+   - Exemplo: `arquivo.png.php`, `arquivo.png.Php5`
+
+3. **Adicionar Caracteres Especiais no Final do Nome do Arquivo**:
+   - Exemplos:
+     - `arquivo.php%20`
+     - `arquivo.php%0a`
+     - `arquivo.php%00`
+     - `arquivo.php%0d%0a`
+     - `arquivo.php/`
+     - `arquivo.php.\`
+     - `arquivo.`
+     - `arquivo.php....`
+     - `arquivo.pHp5....`
+
+4. **Enganar o Analisador de Extensão do Lado do Servidor**:
+   - Exemplo: `arquivo.png.php`, `arquivo.png.pHp5`
+   - Técnicas:
+     - `arquivo.php#.png`
+     - `arquivo.php%00.png`
+     - `arquivo.php\x00.png`
+     - `arquivo.php%0a.png`
+     - `arquivo.php%0d%0a.png`
+     - `arquivo.phpJunk123png`
+
+5. **Adicionar Outra Camada de Extensões**:
+   - Exemplos:
+     - `arquivo.png.jpg.php`
+     - `arquivo.php%00.png%00.jpg`
+
+6. **Colocar a Extensão de Execução Antes da Extensão Válida**:
+   - Exemplo: `arquivo.php.png`
+
+## Uso de Fluxo de Dados Alternativo NTFS (ADS) no Windows
+
+No Windows, você pode usar o fluxo de dados alternativo NTFS (ADS) para contornar verificações de extensão. Isso envolve adicionar dois pontos “:” após uma extensão proibida e antes de uma permitida. Por exemplo:
+
+- `arquivo.asax:.jpg` cria um arquivo vazio com a extensão proibida no servidor.
+- `file.asp::$data.` pode ser usado para criar arquivos não vazios e contornar outras restrições.
+
+## Exemplo de Uso
+
+Aqui está um exemplo de como testar um upload de arquivo usando Burp Suite para aplicar força bruta em todas as combinações de caracteres ASCII e Unicode:
+
+```sh
+arquivo.php%20
+arquivo.php%0a
+arquivo.php%00
+arquivo.php%0d%0a
+arquivo.php/
+arquivo.php.\
+arquivo.
+arquivo.php....
+arquivo.pHp5....
