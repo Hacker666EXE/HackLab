@@ -1,0 +1,104 @@
+# Lista de Portas e Suas Funções
+
+Este documento lista as portas de rede comuns encontradas em computadores e servidores, descrevendo suas funções e usos típicos.
+
+## Portas Comuns e Suas Funções
+
+### Portas de 0 a 1023 (Portas Bem Conhecidas)
+
+1. **Porta 20** - **FTP (File Transfer Protocol) - Data Transfer**
+   - Utilizada para a transferência de dados em sessões de FTP.
+   
+2. **Porta 21** - **FTP (File Transfer Protocol) - Command Control**
+   - Utilizada para enviar comandos entre cliente e servidor FTP.
+
+3. **Porta 22** - **SSH (Secure Shell)**
+   - Utilizada para login remoto seguro, transferência de arquivos (SCP, SFTP) e execução de comandos remotos.
+
+4. **Porta 23** - **Telnet**
+   - Utilizada para login remoto em modo texto. Não segura, pois os dados são transmitidos em texto plano.
+
+5. **Porta 25** - **SMTP (Simple Mail Transfer Protocol)**
+   - Utilizada para envio de emails.
+
+6. **Porta 53** - **DNS (Domain Name System)**
+   - Utilizada para resolução de nomes de domínio em endereços IP.
+
+7. **Porta 67** - **DHCP (Dynamic Host Configuration Protocol) - Server**
+   - Utilizada por servidores DHCP para fornecer configuração IP automática.
+
+8. **Porta 68** - **DHCP (Dynamic Host Configuration Protocol) - Client**
+   - Utilizada por clientes DHCP para receber configuração IP automática.
+
+9. **Porta 69** - **TFTP (Trivial File Transfer Protocol)**
+   - Utilizada para transferência de arquivos simples, sem autenticação.
+
+10. **Porta 80** - **HTTP (HyperText Transfer Protocol)**
+    - Utilizada para a navegação web não segura.
+
+11. **Porta 110** - **POP3 (Post Office Protocol v3)**
+    - Utilizada para recebimento de emails de um servidor de correio eletrônico.
+
+12. **Porta 119** - **NNTP (Network News Transfer Protocol)**
+    - Utilizada para transferência de artigos de grupos de notícias USENET.
+
+13. **Porta 123** - **NTP (Network Time Protocol)**
+    - Utilizada para sincronização de tempo entre sistemas de computador.
+
+14. **Porta 143** - **IMAP (Internet Message Access Protocol)**
+    - Utilizada para acesso a emails em um servidor de correio eletrônico.
+
+15. **Porta 161** - **SNMP (Simple Network Management Protocol)**
+    - Utilizada para gerenciamento de dispositivos de rede.
+
+16. **Porta 194** - **IRC (Internet Relay Chat)**
+    - Utilizada para comunicação de chat em tempo real.
+
+17. **Porta 443** - **HTTPS (HyperText Transfer Protocol Secure)**
+    - Utilizada para navegação web segura.
+
+18. **Porta 465** - **SMTPS (Simple Mail Transfer Protocol Secure)**
+    - Utilizada para envio de emails com segurança SSL/TLS.
+
+19. **Porta 514** - **Syslog**
+    - Utilizada para envio de mensagens de log de sistema.
+
+20. **Porta 587** - **SMTP (Simple Mail Transfer Protocol)**
+    - Utilizada para envio de emails com autenticação.
+
+21. **Porta 631** - **IPP (Internet Printing Protocol)**
+    - Utilizada para serviços de impressão via internet.
+
+22. **Porta 993** - **IMAPS (Internet Message Access Protocol Secure)**
+    - Utilizada para acesso seguro a emails em um servidor de correio eletrônico.
+
+23. **Porta 995** - **POP3S (Post Office Protocol v3 Secure)**
+    - Utilizada para recebimento seguro de emails.
+
+### Portas de 1024 a 49151 (Portas Registradas)
+
+1. **Porta 1433** - **Microsoft SQL Server**
+   - Utilizada para conexão com servidores de banco de dados Microsoft SQL.
+
+2. **Porta 3306** - **MySQL**
+   - Utilizada para conexão com servidores de banco de dados MySQL.
+
+3. **Porta 3389** - **RDP (Remote Desktop Protocol)**
+   - Utilizada para acesso remoto a desktops e servidores Windows.
+
+4. **Porta 5432** - **PostgreSQL**
+   - Utilizada para conexão com servidores de banco de dados PostgreSQL.
+
+5. **Porta 5900** - **VNC (Virtual Network Computing)**
+   - Utilizada para controle remoto de computadores via interface gráfica.
+
+6. **Porta 8080** - **HTTP Alternativo**
+   - Utilizada como uma porta alternativa para o HTTP, frequentemente para servidores web de desenvolvimento.
+
+### Portas de 49152 a 65535 (Portas Dinâmicas ou Privadas)
+
+- Estas portas são normalmente usadas por aplicativos para comunicações temporárias e geralmente são atribuídas dinamicamente.
+
+## Conclusão
+
+Este documento abrange as portas de rede mais comuns encontradas em computadores e servidores. Conhecer a função de cada porta é crucial para administração de sistemas, troubleshooting de redes e segurança cibernética.
