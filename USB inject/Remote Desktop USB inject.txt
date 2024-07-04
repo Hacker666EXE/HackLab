@@ -1,0 +1,20 @@
+DELAY 500 
+GUI r 
+DELAY 500 
+STRING mstsc 
+DELAY 500 
+ENTER 
+DELAY 500 
+STRING [REMOTE_IP_ADDRESS] 
+DELAY 500 
+TAB 
+DELAY 500 
+STRING [USERNAME] 
+DELAY 500 
+TAB 
+DELAY 500 
+STRING [PASSWORD] 
+DELAY 500 
+ENTER 
+
+DELAY 500: Espera por 500 milissegundos (0,5 segundos).GUI r: Pressiona a tecla Windows + R para abrir a janela de Executar.DELAY 500: Espera por 500 milissegundos.STRING mstsc: Digita "mstsc", que é o comando para abrir o Remote Desktop Connection.DELAY 500: Espera por 500 milissegundos.ENTER: Pressiona a tecla Enter para executar o comando "mstsc".DELAY 500: Espera por 500 milissegundos.STRING [REMOTE_IP_ADDRESS]: Digita o endereço IP do computador remoto ao qual deseja se conectar. Você deve substituir [REMOTE_IP_ADDRESS] pelo endereço IP real.DELAY 500: Espera por 500 milissegundos.TAB: Pressiona a tecla Tab para mover o cursor para o próximo campo.DELAY 500: Espera por 500 milissegundos.STRING [USERNAME]: Digita o nome de usuário para a conexão remota. Substitua [USERNAME] pelo nome de usuário real.DELAY 500: Espera por 500 milissegundos.TAB: Pressiona a tecla Tab para mover o cursor para o campo de senha.DELAY 500: Espera por 500 milissegundos.STRING [PASSWORD]: Digita a senha para a conexão remota. Substitua [PASSWORD] pela senha real.DELAY 500: Espera por 500 milissegundos.ENTER: Pressiona a tecla Enter para iniciar a conexão remota com as credenciais fornecidas.Resumindo, o script automatiza a abertura do Remote Desktop Connection, preenche o endereço IP, o nome de usuário e a senha, e tenta estabelecer uma conexão com a área de trabalho remota especificada

