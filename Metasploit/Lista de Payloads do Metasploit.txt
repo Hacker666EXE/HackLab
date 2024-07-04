@@ -1,0 +1,50 @@
+# Lista de Payloads do Metasploit.
+
+
+- **Payloads para Windows:**
+  - `windows/meterpreter/reverse_tcp`
+  - `windows/shell/reverse_tcp`
+  - `windows/meterpreter/reverse_http`
+  - `windows/meterpreter/reverse_https`
+  - `windows/meterpreter/reverse_winhttps`
+  - `windows/exec`
+  - `windows/download_exec`
+  - `windows/meterpreter/bind_tcp`
+  - `windows/shell/bind_tcp`
+  
+- **Payloads para Linux:**
+  - `linux/x86/meterpreter/reverse_tcp`
+  - `linux/x86/shell/reverse_tcp`
+  - `linux/x64/meterpreter/reverse_tcp`
+  - `linux/x64/shell/reverse_tcp`
+  - `linux/x86/shell/bind_tcp`
+  - `linux/x64/shell/bind_tcp`
+  - `linux/x64/shell/reverse_udp`
+  
+- **Payloads para Android:**
+  - `android/meterpreter/reverse_tcp`
+  - `android/meterpreter/reverse_http`
+  - `android/shell/reverse_tcp`
+  - `android/shell/reverse_http`
+  
+- **Payloads para macOS:**
+  - `osx/x86/shell_reverse_tcp`
+  - `osx/x64/shell_reverse_tcp`
+  - `osx/x64/meterpreter_reverse_tcp`
+  - `osx/x64/shell_bind_tcp`
+  - `osx/x64/shell_reverse_https`
+  
+- **Outros Payloads:**
+  - `python/meterpreter/reverse_tcp`
+  - `php/meterpreter/reverse_tcp`
+  - `java/meterpreter/reverse_tcp`
+  - `ruby/meterpreter/reverse_tcp`
+  - `bash/reverse_tcp`
+  - `perl/meterpreter/reverse_tcp`
+  - `nodejs/shell_reverse_tcp`
+  - `tomcat/shell/reverse_tcp`
+  - `war/bind_tcp`
+  - `war/reverse_tcp
+  
+
+Cada payload tem diferentes características e usos específicos, dependendo do sistema operacional alvo e do tipo de conexão reversa desejada.

