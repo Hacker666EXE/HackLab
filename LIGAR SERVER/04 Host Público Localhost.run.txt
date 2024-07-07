@@ -1,0 +1,12 @@
+﻿ssh -R 80:localhost:8080 nokey@localhost.run
+
+Acessar a URL Fornecida:Após executar o comando, 
+o localhost.run fornecerá uma URL acessível pela internet que redirecionará o tráfego para sua aplicação local.Por exemplo, 
+você pode receber uma URL /QR_CODE 
+como https://95431d4664v199.lhr.life/, 
+que estará vinculada à porta especificada da sua aplicação local.
+
+ATENÇÃO:
+Segurança: Certifique-se de que sua aplicação esteja protegida adequadamente, 
+pois ao expor uma aplicação local à internet, 
+ela fica suscetível a acessos externos.

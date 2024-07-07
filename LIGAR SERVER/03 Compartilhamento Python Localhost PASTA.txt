@@ -1,0 +1,27 @@
+import http.server
+import socketserver
+import os
+
+# Define a porta que você deseja usar para o servidor
+PORT = 8080
+
+# Define o diretório onde está localizado o arquivo A>
+diretorio = '/root/Downloads/'
+
+# Classe para manipular solicitações HTTP
+class Handler(http.server.SimpleHTTPRequestHandler):
+    # Sobrescreve o método para definir o diretório r>
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=diretorio, >
+
+# Configura o servidor para servir na porta especific>
+with socketserver.TCPServer(("", PORT), Handler) as h>
+    print(f"Servidor HTTP iniciado em http://localhos>
+    print(f"Compartilhando arquivos do diretório: {di>
+
+    try:
+        # Inicia o servidor e espera por conexões
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        # Interrompe o servidor quando Ctrl+C é press>
+        print("\nServidor encerrado.")
